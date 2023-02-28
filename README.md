@@ -1,12 +1,12 @@
 # EVENODD Erasure Code (EOEC) in C
 
-A C implementation of the Even-Odd Erasure Code (EOEC) that uses io_uring and bstring libraries for better performance.
+A C implementation of the Even-Odd Erasure Code (EOEC) that uses liburing[1] and bstring libraries for better performance.
 
 ## Introduction
 
 EOEC is an erasure code that provides fault tolerance in distributed storage systems. This implementation of EOEC uses io_uring for efficient and scalable I/O operations and bstring for efficient string manipulation.
 
-EVENODD[1] is defined by a prime number `p`. It can encode an array of size $(p-1) \times p$ into an array of size $(p-1) \times (p+2)$. It can accommodate any two errors, i.e. any one or two columns of data lost can be recovered from the remaining data. We call the first p columns "data columns" and the last two columns "parity columns". The 0th parity column is called the "row parity" and the 1st parity column is called the "diagonal parity".
+EVENODD[2] is defined by a prime number `p`. It can encode an array of size $(p-1) \times p$ into an array of size $(p-1) \times (p+2)$. It can accommodate any two errors, i.e. any one or two columns of data lost can be recovered from the remaining data. We call the first p columns "data columns" and the last two columns "parity columns". The 0th parity column is called the "row parity" and the 1st parity column is called the "diagonal parity".
 
 This implementation of EOEC supports three operations:
 
@@ -20,9 +20,9 @@ To build and run EOEC, you need:
 
 - A C compiler that supports C99
   
-- xmake
+- xmake[3]
   
-- io_uring library
+- liburing library
   
 - bstring library
   
@@ -49,7 +49,7 @@ To build and run EOEC, you need:
 3. Build the project:
   
   ```shell
-  xmake
+  xmake --root
   ```
   
 
@@ -114,9 +114,11 @@ example:
 
 ## References
 
-[1] M. Blaum, J. Brady, J. Bruck and Jai Menon, "EVENODD: an efficient scheme for tolerating double disk failures in RAID architectures," in IEEE Transactions on Computers, vol. 44, no. 2, pp. 192-202, Feb. 1995, doi: 10.1109/12.364531.
+[1] [axboe/liburing](https://github.com/axboe/liburing)
 
-[2] [axboe/liburing](https://link.zhihu.com/?target=https%3A//github.com/axboe/liburing)
+[2] M. Blaum, J. Brady, J. Bruck and Jai Menon, "EVENODD: an efficient scheme for tolerating double disk failures in RAID architectures," in IEEE Transactions on Computers, vol. 44, no. 2, pp. 192-202, Feb. 1995, doi: 10.1109/12.364531.
+
+[3] [xmake-io/xmake](https://github.com/xmake-io/xmake)
 
 ## License
 

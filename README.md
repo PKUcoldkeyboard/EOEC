@@ -27,14 +27,14 @@ To build and run EOEC, you need:
 - bstring library
   
 
-## Build Instructions
+## Build Instructions
 
 1. Clone this repository
   
 2. Build the project:
   
   ```shell
-  make
+  xmake
   ```
   
 

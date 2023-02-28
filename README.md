@@ -14,7 +14,7 @@ This implementation of EOEC supports three operations:
 - `read`: decode a file from the storage system and save it to a file
 - `repair`: repair a file from erasures by regenerating the missing data blocks
 
-## Requirements
+## Requirements
 
 To build and run EOEC, you need:
 
@@ -27,7 +27,7 @@ To build and run EOEC, you need:
 - bstring library
   
 
-## Build Instructions
+## Build Instructions
 
 1. Clone this repository
   

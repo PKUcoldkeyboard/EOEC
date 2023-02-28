@@ -29,9 +29,24 @@ To build and run EOEC, you need:
 
 ## Build Instructions
 
-1. Clone this repository
+1. Install `liburing` library:
   
-2. Build the project:
+  ```shell
+  git clone https://github.com/axboe/liburing.git;
+  cd liburing;
+  ./configure --cc=gcc --cxx=g++;
+  make -j$(nproc);
+  sudo make install;
+  ```
+  
+2. Clone this repository:
+  
+  ```shell
+  git clone https://github.com/PKUcoldkeyboard/EOEC.git;
+  cd EOEC;
+  ```
+  
+3. Build the project:
   
   ```shell
   xmake

@@ -112,6 +112,14 @@ example:
 ./evenodd repair 2 0 1
 ```
 
+## Contributors
+
+<a href="https://github.com/PKUcoldkeyboard/EOEC/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=PKUcoldkeyboard/EOEC" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
+
 ## References
 
 [1] [axboe/liburing](https://github.com/axboe/liburing)
